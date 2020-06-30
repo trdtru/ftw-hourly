@@ -93,9 +93,9 @@ export const filters = [
   },
   {
     id: 'yogaStyles',
-    label: 'Yoga styles',
+    label: 'Treatment Categories',
     type: 'SelectMultipleFilter',
-    group: 'secondary',
+    group: 'primary',
     queryParamNames: ['pub_yogaStyles'],
     config: {
       // Optional modes: 'has_all', 'has_any'
@@ -107,19 +107,19 @@ export const filters = [
       // Note: label is not added through the translation files
       // to make filter customizations a bit easier.
       options: [
-        { key: 'ashtanga', label: 'Ashtanga' },
-        { key: 'hatha', label: 'Hatha' },
-        { key: 'kundalini', label: 'Kundalini' },
-        { key: 'restorative', label: 'Restorative' },
-        { key: 'vinyasa', label: 'Vinyasa' },
-        { key: 'yin', label: 'Yin' },
+  { key: 'hair', label: 'Hair' },
+  { key: 'beauty', label: 'Beauty' },
+  { key: 'nails', label: 'Nails' },
+  { key: 'massage', label: 'Massage' },
+  { key: 'barbering', label: 'Barbering' },
+  { key: 'Aesthetics', label: 'Aesthetics' },
       ],
     },
   },
   {
     id: 'certificate',
-    label: 'Certificate',
-    type: 'SelectSingleFilter',
+    label: 'Certifications',
+    type: 'SelectMultipleFilter',
     group: 'secondary',
     queryParamNames: ['pub_certificate'],
     config: {
