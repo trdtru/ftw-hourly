@@ -171,11 +171,11 @@ const BookingInfoMaybe = props => {
   // add the price after the BookingTimeInfo component. You can get the price by uncommenting
   // sthe following lines:
 
-  // const bookingPrice = isOrder ? tx.attributes.payinTotal : tx.attributes.payoutTotal;
-  // const price = bookingPrice ? formatMoney(intl, bookingPrice) : null;
+// const bookingPrice = isOrder ? tx.attributes.payinTotal : tx.attributes.payoutTotal;
+// const price = bookingPrice ? formatMoney(intl, bookingPrice) : null;
 
   // Remember to also add formatMoney function from 'util/currency.js' and add this after BookingTimeInfo:
-  // <div className={css.itemPrice}>{price}</div>
+// <div className={css.itemPrice}>{price}</div>
 
   return (
     <div className={classNames(css.bookingInfoWrapper, bookingClassName)}>
@@ -344,7 +344,7 @@ export const InboxPageComponent = props => {
     !fetchInProgress && hasOrderOrSaleTransactions(transactions, isOrders, ensuredCurrentUser);
   const pagingLinks =
     hasTransactions && pagination && pagination.totalPages > 1 ? (
-      <PaginationLinks
+	<PaginationLinks
         className={css.pagination}
         pageName="InboxPage"
         pagePathParams={params}
@@ -413,6 +413,7 @@ export const InboxPageComponent = props => {
             )}
             {noResults}
           </ul>
+
           {pagingLinks}
         </LayoutWrapperMain>
         <LayoutWrapperFooter>

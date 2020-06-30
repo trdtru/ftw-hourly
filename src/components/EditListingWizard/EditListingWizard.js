@@ -42,7 +42,7 @@ export const TABS = [
   DESCRIPTION,
   FEATURES,
   ADDONS,
-  //POLICY,
+  POLICY,
   LOCATION,
   //PRICING,
   ...availabilityMaybe,
