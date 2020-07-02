@@ -17,9 +17,10 @@
 
 .coverImage {
   width: 100%;
-  height: 528px;
+  height: 500px;
   border-radius: 4px;
   object-fit: cover;
+  object-position: bottom;
   margin: 32px 0 40px;
 }
 
@@ -33,7 +34,7 @@
 }
 
 .contentSide {
-  font-style: italic;
+  
 
   @media (--viewportMedium) {
     width: 193px;

@@ -53,6 +53,7 @@ import SectionDescriptionMaybe from './SectionDescriptionMaybe';
 import SectionFeaturesMaybe from './SectionFeaturesMaybe';
 import SectionReviews from './SectionReviews';
 import SectionMapMaybe from './SectionMapMaybe';
+import SectionRulesMaybe from './SectionRulesMaybe';
 import css from './ListingPage.css';
 
 const MIN_LENGTH_FOR_LONG_WORDS_IN_TITLE = 16;
@@ -374,6 +375,7 @@ export class ListingPageComponent extends Component {
 
     const yogaStylesOptions = findOptionsForSelectFilter('yogaStyles', filterConfig);
     const certificateOptions = findOptionsForSelectFilter('certificate', filterConfig);
+    const rulesOptions = findOptionsForSelectFilter('rules', filterConfig);
 
     return (
       <Page
@@ -431,6 +433,7 @@ export class ListingPageComponent extends Component {
                     publicData={publicData}
                     listingId={currentListing.id}
                   />
+                  <SectionRulesMaybe options={rulesOptions} publicData={publicData} />
                   <SectionReviews reviews={reviews} fetchReviewsError={fetchReviewsError} />
                 </div>
                 <BookingPanel
