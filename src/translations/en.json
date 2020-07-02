@@ -216,6 +216,8 @@
   "EditListingLocationForm.addressRequired": "You need to provide a location",
   "EditListingLocationForm.building": "Apt, suite, building # {optionalText}",
   "EditListingLocationForm.buildingPlaceholder": "A 42",
+  "EditListingLocationForm.radiusPlaceholder": "Radius in km",
+  "EditListingLocationForm.radiusLabel": "Radius (km)",
   "EditListingLocationForm.optionalText": "• optional",
   "EditListingLocationForm.showListingFailed": "Fetching vivify profile data failed",
   "EditListingLocationForm.updateFailed": "Failed to update. Please try again.",

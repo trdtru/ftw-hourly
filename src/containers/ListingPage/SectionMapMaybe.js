@@ -23,12 +23,13 @@ class SectionMapMaybe extends Component {
     }
 
     const address = publicData && publicData.location ? publicData.location.address : '';
+    const radius = publicData && publicData.radius;
     const classes = classNames(rootClassName || css.sectionMap, className);
     const cacheKey = listingId ? `${listingId.uuid}_${geolocation.lat}_${geolocation.lng}` : null;
 
     const mapProps = config.maps.fuzzy.enabled
-      ? { obfuscatedCenter: obfuscatedCoordinates(geolocation, cacheKey) }
-      : { address, center: geolocation };
+      ? { obfuscatedCenter: obfuscatedCoordinates(geolocation, cacheKey), radius }
+      : { address, center: geolocation, radius };
     const map = <Map {...mapProps} useStaticMap={this.state.isStatic} />;
 
     return (

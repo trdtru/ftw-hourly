@@ -57,6 +57,12 @@ export const EditListingLocationFormComponent = props => (
       const buildingPlaceholderMessage = intl.formatMessage({
         id: 'EditListingLocationForm.buildingPlaceholder',
       });
+      const radiusPlaceholderMessage = intl.formatMessage(
+        { id: 'EditListingLocationForm.radiusPlaceholder' }
+      );
+      const radiusLabel = intl.formatMessage(
+        { id: 'EditListingLocationForm.radiusLabel' }
+      );
 
       const { updateListingError, showListingsError } = fetchErrors || {};
       const errorMessage = updateListingError ? (
@@ -106,6 +112,15 @@ export const EditListingLocationFormComponent = props => (
             id="building"
             label={buildingMessage}
             placeholder={buildingPlaceholderMessage}
+          />
+
+          <FieldTextInput
+            className={css.building}
+            type="text"
+            name="radius"
+            id="radius"
+            label={radiusLabel}
+            placeholder={radiusPlaceholderMessage}
           />
 
           <Button
