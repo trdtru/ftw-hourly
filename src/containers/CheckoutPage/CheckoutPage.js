@@ -444,8 +444,8 @@ export class CheckoutPageComponent extends Component {
 
     const orderParams = this.customPricingParams({
       listing: pageData.listing,
-      bookingStart: tx.booking.attributes.start,
-      bookingEnd: tx.booking.attributes.end,
+      bookingStart: pageData.bookingDates.bookingStart,
+      bookingEnd: pageData.bookingDates.bookingEnd,
       quantity: pageData.bookingData ? pageData.bookingData.quantity : null,
       ...optionalPaymentParams,
       addons: addonsFormatted,
