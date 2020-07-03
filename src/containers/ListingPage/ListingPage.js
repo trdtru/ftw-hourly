@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import config from '../../config';
 import routeConfiguration from '../../routeConfiguration';
+import { findOptionsForSelectFilter } from '../../util/search';
 import { LISTING_STATE_PENDING_APPROVAL, LISTING_STATE_CLOSED, propTypes } from '../../util/types';
 import { types as sdkTypes } from '../../util/sdkLoader';
 import {
@@ -52,6 +53,7 @@ import SectionDescriptionMaybe from './SectionDescriptionMaybe';
 import SectionFeaturesMaybe from './SectionFeaturesMaybe';
 import SectionReviews from './SectionReviews';
 import SectionMapMaybe from './SectionMapMaybe';
+import SectionRulesMaybe from './SectionRulesMaybe';
 import css from './ListingPage.css';
 
 const MIN_LENGTH_FOR_LONG_WORDS_IN_TITLE = 16;
@@ -191,8 +193,7 @@ export class ListingPageComponent extends Component {
       sendEnquiryInProgress,
       sendEnquiryError,
       monthlyTimeSlots,
-      certificateConfig,
-      yogaStylesConfig,
+      filterConfig,
     } = this.props;
 
     const listingId = new UUID(rawParams.id);
@@ -371,6 +372,11 @@ export class ListingPageComponent extends Component {
         {authorDisplayName}
       </NamedLink>
     );
+
+    const yogaStylesOptions = findOptionsForSelectFilter('yogaStyles', filterConfig);
+    const certificateOptions = findOptionsForSelectFilter('certificate', filterConfig);
+    const rulesOptions = findOptionsForSelectFilter('rules', filterConfig);
+
     return (
       <Page
         title={schemaTitle}
@@ -415,18 +421,19 @@ export class ListingPageComponent extends Component {
                     formattedPrice={formattedPrice}
                     richTitle={richTitle}
                     listingCertificate={publicData ? publicData.certificate : null}
-                    certificateConfig={certificateConfig}
+                    certificateOptions={certificateOptions}
                     hostLink={hostLink}
                     showContactUser={showContactUser}
                     onContactUser={this.onContactUser}
                   />
                   <SectionDescriptionMaybe description={description} />
-                  <SectionFeaturesMaybe options={yogaStylesConfig} publicData={publicData} />
+                  <SectionFeaturesMaybe options={yogaStylesOptions} publicData={publicData} />
                   <SectionMapMaybe
                     geolocation={geolocation}
                     publicData={publicData}
                     listingId={currentListing.id}
                   />
+                  <SectionRulesMaybe options={rulesOptions} publicData={publicData} />
                   <SectionReviews reviews={reviews} fetchReviewsError={fetchReviewsError} />
                 </div>
                 <BookingPanel
@@ -479,8 +486,7 @@ ListingPageComponent.defaultProps = {
   fetchReviewsError: null,
   monthlyTimeSlots: null,
   sendEnquiryError: null,
-  certificateConfig: config.custom.certificate,
-  yogaStylesConfig: config.custom.yogaStyles,
+  filterConfig: config.custom.filters,
 };
 
 ListingPageComponent.propTypes = {
@@ -526,9 +532,7 @@ ListingPageComponent.propTypes = {
   sendEnquiryError: propTypes.error,
   onSendEnquiry: func.isRequired,
   onInitializeCardPaymentData: func.isRequired,
-
-  certificateConfig: array,
-  yogaStylesConfig: array,
+  filterConfig: array,
 };
 
 const mapStateToProps = state => {

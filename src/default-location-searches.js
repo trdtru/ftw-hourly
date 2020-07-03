@@ -11,50 +11,50 @@ export default [
   {
     id: 'default-new-york',
     predictionPlace: {
-      address: 'New York City, New York, USA',
+      address: 'London, United Kingdom',
       bounds: new LatLngBounds(
-        new LatLng(40.917576401307, -73.7008392055224),
-        new LatLng(40.477399, -74.2590879797556)
+        new LatLng(51.7963684, 0.27388115),
+ new LatLng(51.2120139, -0.51087702),
       ),
     },
   },
   {
     id: 'default-los-angeles',
     predictionPlace: {
-      address: 'Los Angeles, California, USA',
+      address: 'Manchester, United Kingdom',
       bounds: new LatLngBounds(
-        new LatLng(34.161440999758, -118.121305008073),
-        new LatLng(33.9018913203336, -118.521456965901)
+        new LatLng(53.59171533, -2.09167594),
+        new LatLng(53.36957445, -2.4037123)
       ),
     },
   },
   {
     id: 'default-san-francisco',
     predictionPlace: {
-      address: 'San Francisco, California, USA',
+      address: 'Leeds, United Kingdom',
       bounds: new LatLngBounds(
-        new LatLng(37.8324430069081, -122.354995082683),
-        new LatLng(37.6044780500533, -122.517910874663)
+        new LatLng(53.87085933, -1.43711007),
+        new LatLng(53.71451261, -1.65835702)
       ),
     },
   },
   {
     id: 'default-seattle',
     predictionPlace: {
-      address: 'Seattle, Washington, USA',
+      address: 'Birmingham, United Kingdom',
       bounds: new LatLngBounds(
-        new LatLng(47.7779392908564, -122.216605992108),
-        new LatLng(47.3403950185547, -122.441233019046)
+        new LatLng(52.64800113, -1.70506471),
+        new LatLng(52.32565627, -2.14755863)
       ),
     },
   },
   {
     id: 'default-portland',
     predictionPlace: {
-      address: 'Portland, Oregon, USA',
+      address: 'Glasgow, United Kingdom',
       bounds: new LatLngBounds(
-        new LatLng(45.858099013046, -122.441059986416),
-        new LatLng(45.3794799927623, -122.929215816001)
+        new LatLng(55.93209271, -4.13580413),
+        new LatLng(55.78305529, -4.35777671)
       ),
     },
   },

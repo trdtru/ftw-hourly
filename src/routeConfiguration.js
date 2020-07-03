@@ -14,6 +14,7 @@ import {
   PasswordRecoveryPage,
   PasswordResetPage,
   StripePayoutPage,
+  PartnerPage,
   PaymentMethodsPage,
   PrivacyPolicyPage,
   ProfilePage,
@@ -61,6 +62,11 @@ const routeConfiguration = () => {
       path: '/about',
       name: 'AboutPage',
       component: AboutPage,
+    },
+    {
+      path: '/partners',
+      name: 'PartnerPage',
+      component: PartnerPage,
     },
     {
       path: '/s',

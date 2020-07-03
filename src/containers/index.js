@@ -8,6 +8,7 @@ export { default as InboxPage } from './InboxPage/InboxPage';
 export { default as LandingPage } from './LandingPage/LandingPage';
 export { default as ListingPage } from './ListingPage/ListingPage';
 export { default as NotFoundPage } from './NotFoundPage/NotFoundPage';
+export { default as PartnerPage } from './PartnerPage/PartnerPage';
 export { default as PasswordChangePage } from './PasswordChangePage/PasswordChangePage';
 export { default as PasswordRecoveryPage } from './PasswordRecoveryPage/PasswordRecoveryPage';
 export { default as PasswordResetPage } from './PasswordResetPage/PasswordResetPage';

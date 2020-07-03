@@ -122,16 +122,7 @@ export const AddonFormComponent = props => (
                 {saveActionMsg}
               </Button>
             </div>
-            <div className={css.columnBtn}>
-              <Button
-                className={css.submitButton}
-                type="button"
-                onClick={form.reset}
-                disabled={submitting || pristine}
-              >
-                Reset
-              </Button>
-            </div>
+
           </div>
         </Form>
       );

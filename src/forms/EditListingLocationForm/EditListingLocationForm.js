@@ -45,18 +45,6 @@ export const EditListingLocationFormComponent = props => (
       const addressNotRecognizedMessage = intl.formatMessage({
         id: 'EditListingLocationForm.addressNotRecognized',
       });
-
-      const optionalText = intl.formatMessage({
-        id: 'EditListingLocationForm.optionalText',
-      });
-
-      const buildingMessage = intl.formatMessage(
-        { id: 'EditListingLocationForm.building' },
-        { optionalText: optionalText }
-      );
-      const buildingPlaceholderMessage = intl.formatMessage({
-        id: 'EditListingLocationForm.buildingPlaceholder',
-      });
       const radiusPlaceholderMessage = intl.formatMessage(
         { id: 'EditListingLocationForm.radiusPlaceholder' }
       );
@@ -105,14 +93,9 @@ export const EditListingLocationFormComponent = props => (
             )}
           />
 
-          <FieldTextInput
-            className={css.building}
-            type="text"
-            name="building"
-            id="building"
-            label={buildingMessage}
-            placeholder={buildingPlaceholderMessage}
-          />
+<p className={css.tip}>
+                <FormattedMessage id="EditListingLocationForm.locationTip" />
+              </p>
 
           <FieldTextInput
             className={css.building}
