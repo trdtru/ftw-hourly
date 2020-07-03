@@ -32,7 +32,7 @@ const sortSearchByDistance = false;
 //
 // In a way, 'processAlias' defines which transaction process (or processes)
 // this particular web application is able to handle.
-const bookingProcessAlias = 'preauth-nightly-booking/with-addons-v15';
+const bookingProcessAlias = 'preauth-nightly-booking/with-addons-v-16';
 
 // The transaction line item code for the main unit type in bookings.
 //
@@ -139,7 +139,7 @@ const maps = {
   // coordinates are still accessible in the HTTP requests and the
   // Redux store.
   fuzzy: {
-    enabled: false,
+    enabled: true,
 
     // Amount of maximum offset in meters that is applied to obfuscate
     // the original coordinates. The actual value is random, but the
@@ -149,7 +149,7 @@ const maps = {
 
     // Default zoom level when showing a single circle on a Map. Should
     // be small enough so the whole circle fits in.
-    defaultZoomLevel: 13,
+    defaultZoomLevel: 11,
 
     // Color of the circle on the Map component.
     circleColor: '#c0392b',

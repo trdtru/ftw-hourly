@@ -45,7 +45,12 @@ export const EditListingLocationFormComponent = props => (
       const addressNotRecognizedMessage = intl.formatMessage({
         id: 'EditListingLocationForm.addressNotRecognized',
       });
-
+      const radiusPlaceholderMessage = intl.formatMessage(
+        { id: 'EditListingLocationForm.radiusPlaceholder' }
+      );
+      const radiusLabel = intl.formatMessage(
+        { id: 'EditListingLocationForm.radiusLabel' }
+      );
 
       const { updateListingError, showListingsError } = fetchErrors || {};
       const errorMessage = updateListingError ? (
@@ -91,6 +96,15 @@ export const EditListingLocationFormComponent = props => (
 <p className={css.tip}>
                 <FormattedMessage id="EditListingLocationForm.locationTip" />
               </p>
+
+          <FieldTextInput
+            className={css.building}
+            type="text"
+            name="radius"
+            id="radius"
+            label={radiusLabel}
+            placeholder={radiusPlaceholderMessage}
+          />
 
           <Button
             className={css.submitButton}

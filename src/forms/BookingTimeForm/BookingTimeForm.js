@@ -7,14 +7,26 @@ import classNames from 'classnames';
 import { calculateQuantityFromHours, timestampToDate } from '../../util/dates';
 import { propTypes } from '../../util/types';
 import config from '../../config';
-import {FieldCheckbox, FieldTextInput, Form, PrimaryButton} from '../../components';
+import {
+  FieldCheckbox,
+  Form,
+  LocationAutocompleteInputField,
+  PrimaryButton
+} from '../../components';
 import EstimatedBreakdownMaybe from './EstimatedBreakdownMaybe';
 import FieldDateAndTimeInput from './FieldDateAndTimeInput';
 
 import css from './BookingTimeForm.css';
 import {formatMoney} from "../../util/currency";
 import { types as sdkTypes } from '../../util/sdkLoader';
+import {
+  autocompletePlaceSelected,
+  autocompleteSearchRequired,
+  composeValidators
+} from "../../util/validators";
 const { Money } = sdkTypes;
+
+const identity = v => v;
 
 export class BookingTimeFormComponent extends Component {
   constructor(props) {
@@ -146,6 +158,16 @@ export class BookingTimeFormComponent extends Component {
             { id: 'BookingTimeForm.customerAddressPlaceholder' }
           );
 
+          const addressPlaceholderMessage = intl.formatMessage({
+            id: 'EditListingLocationForm.addressPlaceholder',
+          });
+          const addressRequiredMessage = intl.formatMessage({
+            id: 'EditListingLocationForm.addressRequired',
+          });
+          const addressNotRecognizedMessage = intl.formatMessage({
+            id: 'EditListingLocationForm.addressNotRecognized',
+          });
+
           return (
             <Form onSubmit={handleSubmit} className={classes}>
 
@@ -189,13 +211,25 @@ export class BookingTimeFormComponent extends Component {
               <label className={css.customerAddressLabel}>
                 <FormattedMessage id={'BookingTimeForm.customerAddressLabel'}/>
               </label>
-              <FieldTextInput
-                inputRootClass={css.textarea}
-                type="textarea"
-                id={'customer-address'}
-                name="customerAddress"
-                placeholder={customerAddressPlaceholder}
+
+              <LocationAutocompleteInputField
+                className={css.locationAddress}
+                inputClassName={css.locationAutocompleteInput}
+                iconClassName={css.locationAutocompleteInputIcon}
+                predictionsClassName={css.predictionsRoot}
+                validClassName={css.validLocation}
+                autoFocus
+                name="customerAddressInput"
+                placeholder={addressPlaceholderMessage}
+                useDefaultPredictions={false}
+                format={identity}
+                valueFromForm={values.customerAddress}
+                validate={composeValidators(
+                  autocompleteSearchRequired(addressRequiredMessage),
+                  autocompletePlaceSelected(addressNotRecognizedMessage)
+                )}
               />
+
               <p/>
               <p className={css.smallPrint}>
                 <FormattedMessage

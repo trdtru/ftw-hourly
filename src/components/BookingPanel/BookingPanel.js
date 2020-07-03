@@ -100,10 +100,11 @@ const BookingPanel = props => {
 
   const handleSubmit = values => {
     const selectedAddons = addonsData.filter(addonData => values.addons.includes(addonData.addOnTitle));
+    const customerAddress = (values.customerAddressInput && values.customerAddressInput.selectedPlace) ? values.customerAddressInput.selectedPlace.address : '';
     onSubmit({
       ...values,
       addons: selectedAddons,
-      protectedData: { selectedAddons, customerAddress: values.customerAddress }
+      protectedData: { selectedAddons, customerAddress }
     });
   };
 

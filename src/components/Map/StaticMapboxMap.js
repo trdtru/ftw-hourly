@@ -9,14 +9,17 @@ const formatColor = color => {
   return color.replace(/^#/, '');
 };
 
-const fuzzyCircleOverlay = (center, mapsConfig) => {
+// center - coordinates,
+// mapsConfig - configs
+// radius - radius in km
+const fuzzyCircleOverlay = (center, mapsConfig, radius) => {
   const strokeWeight = 1;
   const strokeColor = mapsConfig.fuzzy.circleColor;
   const strokeOpacity = 0.5;
   const fillColor = mapsConfig.fuzzy.circleColor;
   const fillOpacity = 0.2;
 
-  const path = circlePolyline(center, mapsConfig.fuzzy.offset);
+  const path = circlePolyline(center, radius ? (radius * 1000) :  mapsConfig.fuzzy.offset);
   const styles = `-${strokeWeight}+${formatColor(strokeColor)}-${strokeOpacity}+${formatColor(
     fillColor
   )}-${fillOpacity}`;
@@ -32,9 +35,9 @@ const markerOverlay = center => {
   return `pin-s(${center.lng},${center.lat})`;
 };
 
-const mapOverlay = (center, mapsConfig) => {
+const mapOverlay = (center, mapsConfig, radius) => {
   if (mapsConfig.fuzzy.enabled) {
-    return fuzzyCircleOverlay(center, mapsConfig);
+    return fuzzyCircleOverlay(center, mapsConfig, radius);
   }
   if (mapsConfig.customMarker.enabled) {
     return customMarkerOverlay(center, mapsConfig);
@@ -43,7 +46,7 @@ const mapOverlay = (center, mapsConfig) => {
 };
 
 const StaticMapboxMap = props => {
-  const { address, center, zoom, mapsConfig, dimensions } = props;
+  const { address, center, zoom, mapsConfig, dimensions, radius } = props;
   const { width, height } = dimensions;
 
   const libLoaded = typeof window !== 'undefined' && window.mapboxgl;
@@ -51,7 +54,7 @@ const StaticMapboxMap = props => {
     return null;
   }
 
-  const overlay = mapOverlay(center, mapsConfig);
+  const overlay = mapOverlay(center, mapsConfig, radius);
   const src =
     'https://api.mapbox.com/styles/v1/mapbox/streets-v10/static' +
     (overlay ? `/${overlay}` : '') +
