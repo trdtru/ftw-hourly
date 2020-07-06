@@ -93,9 +93,7 @@ export const EditListingLocationFormComponent = props => (
             )}
           />
 
-<p className={css.tip}>
-                <FormattedMessage id="EditListingLocationForm.locationTip" />
-              </p>
+
 
           <FieldTextInput
             className={css.building}
@@ -105,7 +103,9 @@ export const EditListingLocationFormComponent = props => (
             label={radiusLabel}
             placeholder={radiusPlaceholderMessage}
           />
-
+          <p className={css.tip}>
+                          <FormattedMessage id="EditListingLocationForm.locationTip" />
+                        </p>
           <Button
             className={css.submitButton}
             type="submit"
@@ -115,6 +115,7 @@ export const EditListingLocationFormComponent = props => (
           >
             {saveActionMsg}
           </Button>
+
         </Form>
       );
     }}
