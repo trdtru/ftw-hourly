@@ -129,8 +129,8 @@ export const filters = [
       // to make filter customizations a bit easier.
       options: [
         { key: 'none', label: 'None', hideFromFilters: true, hideFromListingInfo: true },
-        { key: '200h', label: 'Registered yoga teacher 200h' },
-        { key: '500h', label: 'Registered yoga teacher 500h' },
+        { key: '200h', label: 'Qualified hair, nails or beauty practitioner' },
+        { key: '500h', label: 'Qualified aesthetics practitioner' },
       ],
     },
   },
