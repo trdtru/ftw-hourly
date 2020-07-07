@@ -54,34 +54,34 @@ const SectionCategories = props => {
         {locationLink(
           'Hair',
           hairImage,
-          '?address=London%2C%20Greater%20London%2C%20England%2C%20United%20Kingdom&bounds=51.669993%2C0.152641%2C51.384598%2C-0.35167'
+          '?address=United%20Kingdom&bounds=59.71220931%2C3.29963686%2C48.21698826%2C-11.96781662&pub_yogaStyles=has_all%3Ahair'
         )}
         {locationLink(
           'Beauty',
           beautyImage,
-          '?address=Manchester%2C%20Greater%20Manchester%2C%20England%2C%20United%20Kingdom&bounds=53.586199%2C-2.087698%2C53.348612%2C-2.52355'
+          '?address=United%20Kingdom&bounds=59.71220931%2C3.29963686%2C48.21698826%2C-11.96781662&pub_yogaStyles=has_all%3Abeauty'
         )}
         {locationLink(
           'Nails',
           nailsImage,
-          '?address=Leeds%2C%20West%20Yorkshire%2C%20England%2C%20United%20Kingdom&bounds=53.955164%2C-1.161587%2C53.719309%2C-1.800362'
+          '?address=United%20Kingdom&bounds=59.71220931%2C3.29963686%2C48.21698826%2C-11.96781662&pub_yogaStyles=has_all%3Anails'
         )}
       </div>
 <div className={css.locations}>
         {locationLink(
           'Massage & Spa',
           massageImage,
-          '?address=London%2C%20Greater%20London%2C%20England%2C%20United%20Kingdom&bounds=51.669993%2C0.152641%2C51.384598%2C-0.35167'
+          '?address=United%20Kingdom&bounds=59.71220931%2C3.29963686%2C48.21698826%2C-11.96781662&pub_yogaStyles=has_all%3Amassage'
         )}
         {locationLink(
           'Barbers',
           barbersImage,
-          '?address=Manchester%2C%20Greater%20Manchester%2C%20England%2C%20United%20Kingdom&bounds=53.586199%2C-2.087698%2C53.348612%2C-2.52355'
+          '?address=United%20Kingdom&bounds=59.71220931%2C3.29963686%2C48.21698826%2C-11.96781662&pub_yogaStyles=has_all%3Abarbering'
         )}
         {locationLink(
           'Aesthetics',
           aestheticsImage,
-          '?address=Leeds%2C%20West%20Yorkshire%2C%20England%2C%20United%20Kingdom&bounds=53.955164%2C-1.161587%2C53.719309%2C-1.800362'
+          '?address=United%20Kingdom&bounds=59.71220931%2C3.29963686%2C48.21698826%2C-11.96781662&pub_yogaStyles=has_all%3AAesthetics'
         )}
       </div>
     </div>
