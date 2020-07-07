@@ -84,8 +84,8 @@ const Footer = props => {
             <div className={css.infoLinks}>
               <ul className={css.list}>
                 <li className={css.listItem}>
-                  <NamedLink name="NewListingPage" className={css.link}>
-                    <FormattedMessage id="Footer.toNewListingPage" />
+                  <NamedLink name="SignupPage" className={css.link}>
+                    <FormattedMessage id="Footer.toSignUpPage" />
                   </NamedLink>
                 </li>
                 <li className={css.listItem}>
@@ -94,7 +94,7 @@ const Footer = props => {
                   </NamedLink>
                 </li>
 
-                
+
                 <li className={css.listItem}>
                   <NamedLink name="AboutPage" to={{ hash: '#contact' }} className={css.link}>
                     <FormattedMessage id="Footer.toContactPage" />
@@ -104,22 +104,27 @@ const Footer = props => {
             </div>
             <div className={css.searches}>
               <ul className={css.list}>
+              <li className={css.listItem}>
+                <NamedLink name="NewListingPage" className={css.link}>
+                  <FormattedMessage id="Footer.toNewListingPage" />
+                </NamedLink>
+              </li>
                 <li className={css.listItem}>
                   <NamedLink name="PartnerPage" className={css.link}>
                     <FormattedMessage id="Footer.toPartnerPage" />
                   </NamedLink>
-                </li> 
+                </li>
 <li className={css.listItem}>
                   <NamedLink name="PartnerPage" className={css.link}>
                     <FormattedMessage id="Footer.toPartnerHelp" />
                   </NamedLink>
-                </li>                 
+                </li>
               </ul>
             </div>
             <div className={css.searchesExtra}>
              <ul className={css.list}>
              <li className={css.listItem}>
-         
+
           </li>
            </ul>
             </div>
