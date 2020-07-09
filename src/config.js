@@ -89,10 +89,10 @@ const canonicalRootURL = process.env.REACT_APP_CANONICAL_ROOT_URL;
 const siteTitle = 'vivify';
 
 // Twitter handle is needed in meta tags (twitter:site). Start it with '@' character
-const siteTwitterHandle = '@vivifytreatments';
+const siteTwitterHandle = '@vivify_beauty';
 
 // Instagram page is used in SEO schema (http://schema.org/Organization)
-const siteInstagramPage = '@vivifytreatments';
+const siteInstagramPage = 'https://www.instagram.com/vivify_beauty';
 
 // Facebook page is used in SEO schema (http://schema.org/Organization)
 const siteFacebookPage = 'https://www.facebook.com/Vivify-108394354250254/';
