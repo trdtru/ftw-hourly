@@ -51,11 +51,11 @@ to enliven.</p><p>
             <div className={css.contentMain}>
               <h2>
                 vivify was created for those who do both. The women slaying in the boardroom by day and the dating game by night. The stay-at-home champions raising little <strike>monsters</strike> angels but want to trade juice-stains for jaw-drops on date night.</h2><h2>
-The business trippers ready to tear it up after a day of meetings. Those who want to turn head both on and off the court. Whichever you are, vivify was created for <strong>you</strong>.
+The business trippers ready to tear it up after a day of meetings. Those who want to turn heads both on and off the court. Whichever you are, vivify was created for <strong>you</strong>.
               </h2>
 
               <p>
-                Our mission is to make it easy for everyone to get beauty on demand –  vivify let’s you find and book mobile hair, beauty, nail, barbering, massage and aesthetic treatments at not just a time and price that is right for you, but also in a location of your choosing. Heading straight out after work? Our top-rated treatment practitioners will come to your office. Just in town for an event? We’ll bring the salon to your hotel room. Had a crap day? Book on your way home and have a masseuse waiting for you by the time you get off the bus.
+                Our mission is to make it easy for everyone to get beauty on demand –  vivify lets you find and book mobile hair, beauty, nail, barbering, massage and aesthetic treatments at not just a time and price that is right for you, but also in a location of your choosing. Heading straight out after work? Our top-rated treatment practitioners will come to your office. Just in town for an event? We’ll bring the salon to your hotel room. Had a crap day? Book on your way home and have a masseuse waiting for you by the time you get off the bus.
  </p><p>
 Instant beauty and wellness, when and where you want it.
               </p>
@@ -70,8 +70,8 @@ Instant beauty and wellness, when and where you want it.
 You can even write us a letter, if you want. Who doesn't love a bit of proper post!? Gives you a chance to indulge your stationary obsession:</p>
 <p>
 Windsor House, Cornwall Road, Harrogate, North Yorkshire, HG1 2PW
-</p> 
-      
+</p>
+
 <h3 className={css.subtitle}>
                 Do you own a mobile or freelance hair & beauty business?
               </h3>
